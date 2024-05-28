@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Todoapp</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px; 
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+            background: linear-gradient(#e66465, #9198e5);
+        }
+        .box{
+            width: 450px; 
+            height: 550px; 
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            background: #fff;
+            border-radius: 30px;
+        }
+
+        h1{
+            text-align: center;
+            font-weight: 600; 
+            margin-bottom: 20px;
+        }
+        #todoinput{
+            position: relative;
+            width: 90%; 
+            outline: none; 
+            padding: 15px 20px; 
+            margin:0 auto; 
+        }
+        .box li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 40px); 
+    background: #f9f9f9; 
+    margin: 15px 0px; 
+    min-height: 45px; 
+    padding: 0px 20px; 
+    border-radius: 22px; 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px; 
+    transition:  0.3s ease-in-out; 
+}
+        .box li:hover {
+            background: #DB7093; 
+            cursor: pointer; 
+        }
+        .box li i {
+            position: relative;
+            margin-right: 10px; 
+            font-size: 15px; 
+            cursor: pointer;
+           
+
+
+        }
+        #todolist{
+            position: relative; 
+            height: 350px; 
+            overflow: auto; 
+            margin-top: 20px;
+            transition-delay: .5s;
+        }
+        .box li button {
+            border: none;
+            background: none;
+              
+        }
+        .box li button:hover {
+            background: transparent;
+        }
+        .edit-btn{
+            margin-left: auto;
+
+        }
+        
+@media (max-width: 600px) {
+    .box {
+        width: 290px; 
+            height: 450px; 
+    }
+    #todolist{
+            position: relative; 
+            height: 250px; 
+            overflow: auto; 
+            margin-top: 20px;
+            transition-delay: .5s;
+        }
+}
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="box">
+            <h1>To Do App</h1>
+            <div style="text-align: center;"><input type="text"  id="todoinput" placeholder="Your new To Do"></div>
+            <ul id="todolist">
+
+            </ul>   
+        </div>
+    </div>
+
+    <script src="todoapp.js"></script>
+</body>
+</html>
